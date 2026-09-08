@@ -1,6 +1,9 @@
 #include "ImprimeReporte.h"
+#include "Lugar.h"
+
 #include <iostream>
 #include <iomanip>
+#include <vector>
 
 using namespace std;
 
@@ -46,8 +49,7 @@ void mostrarEstado(const vector<Lugar>& estacionamiento) {
 
     cout << "Ocupacion total: "
          << porcentaje << "% ("
-         << totalOcupados << "/23)"
-         << endl;
+         << totalOcupados << "/23)" << endl;
 
     cout << "-----------------------------------" << endl;
 }

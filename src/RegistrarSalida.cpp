@@ -1,5 +1,9 @@
 #include "RegistrarSalida.h"
+#include "Lugar.h"
+
 #include <iostream>
+#include <vector>
+#include <string>
 #include <cctype>
 
 using namespace std;
@@ -16,21 +20,18 @@ bool registrarSalida(vector<Lugar>& estacionamiento,
         tipo = "SUV";
         numeroTexto = entrada.substr(3);
     }
-
     else if (entrada.length() >= 5 &&
              entrada.substr(0, 5) == "SEDAN") {
 
         tipo = "SEDAN";
         numeroTexto = entrada.substr(5);
     }
-
     else if (entrada.length() >= 8 &&
              entrada.substr(0, 8) == "COMPACTO") {
 
         tipo = "COMPACTO";
         numeroTexto = entrada.substr(8);
     }
-
     else {
 
         cout << "Entrada invalida: tipo de vehiculo no reconocido."
@@ -44,9 +45,7 @@ bool registrarSalida(vector<Lugar>& estacionamiento,
         !isdigit(numeroTexto[1])) {
 
         cout << "Salida invalida: el lugar "
-             << entrada
-             << " no existe."
-             << endl;
+             << entrada << " no existe." << endl;
 
         return false;
     }
@@ -61,9 +60,7 @@ bool registrarSalida(vector<Lugar>& estacionamiento,
             if (!lugar.ocupado) {
 
                 cout << "Salida invalida: el lugar "
-                     << entrada
-                     << " ya esta libre."
-                     << endl;
+                     << entrada << " ya esta libre." << endl;
 
                 return false;
             }
@@ -71,18 +68,14 @@ bool registrarSalida(vector<Lugar>& estacionamiento,
             lugar.ocupado = false;
 
             cout << "Vehiculo de lugar "
-                 << entrada
-                 << " ha salido."
-                 << endl;
+                 << entrada << " ha salido." << endl;
 
             return true;
         }
     }
 
     cout << "Salida invalida: el lugar "
-         << entrada
-         << " no existe."
-         << endl;
+         << entrada << " no existe." << endl;
 
     return false;
 }

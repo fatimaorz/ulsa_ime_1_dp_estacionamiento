@@ -1,5 +1,9 @@
 #include "RegistrarEntrada.h"
+#include "Lugar.h"
+
 #include <iostream>
+#include <vector>
+#include <string>
 
 using namespace std;
 
