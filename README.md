@@ -59,19 +59,29 @@ más un número consecutivo, por ejemplo `SUV1`, `SEDAN2`, `COMPACTO3`.
 ## Estructura del proyecto
 
 ```
-.
+proyecto-estacionamiento/
+│
 ├── .clangd
 ├── .gitignore
-├── include
-│   ├── RegistrarEntrada.h    # Función registrarEntrada(...)
-│   └── RegistrarSalida.h     # Función registrarSalida(...)
 ├── Makefile
 ├── README.md
-└── src
-    └── main.cpp              # Función principal: lee la entrada del usuario
-                               # y decide si es una entrada, una salida o el
-                               # comando SALIR
-```
+│
+├── include/
+│   ├── Lugar.h
+│   ├── RegistrarEntrada.h
+│   ├── RegistrarSalida.h
+│   └── ImprimeReporte.h
+│
+├── src/
+│   ├── main.cpp
+│   ├── RegistrarEntrada.cpp
+│   ├── RegistrarSalida.cpp
+│   └── ImprimeReporte.cpp
+│
+└── docs/
+    ├── pseudocodigo.md
+    ├── pruebas.md
+    └── evidencias/
 
 Las funciones `registrarEntrada` y `registrarSalida` están separadas de
 `main()` y viven cada una en su propio archivo `.h` dentro de `include/`, con
