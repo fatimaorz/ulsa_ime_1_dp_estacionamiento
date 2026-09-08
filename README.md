@@ -113,3 +113,57 @@ incluir, entre otras cosas:
   códigos activos, en lugar de escribir un ciclo manual.
 - Los archivos `.h` usan include guards (`#ifndef` / `#define` / `#endif`)
   para evitar problemas si llegaran a incluirse más de una vez.
+  # SmartPark - Simulador de Acceso a Estacionamiento
+
+## Descripción
+
+SmartPark es un simulador de acceso a un estacionamiento desarrollado en C++.
+
+El programa permite registrar la entrada y salida de vehículos, asignar lugares disponibles y mostrar el estado actual del estacionamiento.
+
+El estacionamiento cuenta con:
+
+- 5 lugares para vehículos SUV.
+- 8 lugares para vehículos SEDAN.
+- 10 lugares para vehículos COMPACTO.
+- 23 lugares en total.
+
+## Integrantes y roles
+
+| Integrante | Rol |
+|---|---|
+| Nathaly Valdés | Analista / Líder de diseño |
+| Fatima Marisol Orrozco | Programador principal |
+| Regina Murillo Arellano | Programador de módulos |
+| Marian Reynoso Romo | Tester / QA |
+| Lucia Anaid Tavares Espinosa | Documentador / Presentador |
+
+## Funcionalidades
+
+El programa permite:
+
+1. Registrar la entrada de un vehículo.
+2. Asignar automáticamente un lugar disponible.
+3. Registrar la salida de un vehículo mediante su número de lugar.
+4. Detectar cuando un tipo de vehículo ya no tiene lugares disponibles.
+5. Detectar entradas inválidas.
+6. Detectar intentos de salida de lugares inexistentes.
+7. Detectar intentos de salida de lugares que ya están libres.
+8. Mostrar el estado y porcentaje de ocupación del estacionamiento.
+9. Finalizar la simulación utilizando el comando `SALIR`.
+
+## Tipos de vehículos
+
+Los tipos de vehículos aceptados son:
+
+- `SUV`
+- `SEDAN`
+- `COMPACTO`
+
+## Ejemplo de uso
+
+Para registrar una entrada:
+
+```text
+> SUV
+Vehiculo aceptado. Lugar asignado: SUV01
