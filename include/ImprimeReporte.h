@@ -2,10 +2,9 @@
 #define IMPRIME_REPORTE_H
 
 #include <vector>
+#include "Lugar.h"
 
 using namespace std;
-
-struct Lugar;
 
 void mostrarEstado(const vector<Lugar>& estacionamiento);
 
